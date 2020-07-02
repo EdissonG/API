@@ -42,10 +42,10 @@
       let lista = document.getElementById("listaPokemon");
       //Creamos una función
       function consultarPokemon(id, num) {
-        //consultar api y enviar paremetro
-        //Fetch promesa en JS
+        //consultar api y enviar parámetro
+        //Fetch procesa en JS
         fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-          //Recibimos una funcion
+          //Recibimos una función
           .then(function(response) {
             //Convertir la respuesta en JSON
             response.json().then(function(pokemon) {
@@ -58,7 +58,7 @@
         //Número random
         let primerId = Math.round(Math.random() * 150);
         let segundoId = Math.round(Math.random() * 150);
-        //Se pasa esos numeros a una función
+        //Se pasa esos números a una función
         consultarPokemon(primerId, 1);
         consultarPokemon(segundoId, 2);
       }
